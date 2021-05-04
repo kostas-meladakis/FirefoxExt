@@ -1,4 +1,10 @@
 <html>
   <h1>Hello Nakamas</h1>
-  <script src=accelometer.js></script>
+  
+  <script>
+     window.addEventListener("devicemotion", function(event) {
+    console.log("ACCEL, event.accelerationIncludingGravity.x, "," , event.accelerationIncludingGravity.y , "," , event.accelerationIncludingGravity.z); 
+     }, true);
+ </script> 
+  
 </html>
