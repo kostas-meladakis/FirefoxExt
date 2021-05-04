@@ -2,9 +2,18 @@
   <h1>Hello Nakamas</h1>
   
   <script>
-     window.addEventListener("devicemotion", function(event) {
-    console.log("ACCEL, event.accelerationIncludingGravity.x, "," , event.accelerationIncludingGravity.y , "," , event.accelerationIncludingGravity.z); 
-     }, true);
+     function handleMotionEvent(event) {
+
+    var x = event.accelerationIncludingGravity.x;
+    var y = event.accelerationIncludingGravity.y;
+    var z = event.accelerationIncludingGravity.z;
+
+    // Do something awesome.
+    console.log(x, y, z);
+}
+
+window.addEventListener("devicemotion", handleMotionEvent, true);
+
  </script> 
   
 </html>
